@@ -41,10 +41,11 @@ water_subduction/
         ├── SpreadingRate/
         └── TotalSediment/
 ```
-The input grids should be prepared as follows, depending on the plate reconstruction model required:
+### Input grids
+The input grids should be prepared as follows, depending on the plate reconstruction model required, see [EarthByte Group's list of available global and regional plate motion models](https://www.earthbyte.org/category/resources/data-models/global-regional-plate-motion-models/):
 
 - `CarbonateSediment` from the GitHub workflow [CarbonateSedimentThickness](https://github.com/EarthByte/CarbonateSedimentThickness)
-- `ContinentalMasks`, `SeafloorAge` and `SpreadingRate` from `gplately`'s `SeafloorGrid` module, unless already available for the selected plate model elsewhere, like Zenodo or webDAV.
+- `ContinentalMasks`, `SeafloorAge` and `SpreadingRate` may be found in the [EarthByte Group's list of available global and regional plate motion models](https://www.earthbyte.org/category/resources/data-models/global-regional-plate-motion-models/), subject to availability. Otherwise, the grids can be produced from `gplately`'s `SeafloorGrid` module - see the sample notebook [here](https://github.com/GPlates/gplately/blob/master/Notebooks/10-SeafloorGrids.ipynb). Otherwise, grids may also be available for the selected plate model elsewhere, like Zenodo or webDAV.
 - `CrustalCarbon` from `\utils\`, which itself requires the `SeafloorAge` and `SpreadingRate` grids.
 - `TotalSediment` from the [GitHub workflow](https://github.com/EarthByte/predicting-sediment-thickness). More details [here](https://www.earthbyte.org/predicting-sediment-thickness-on-vanished-ocean-crust-since-200-ma/).
 
