@@ -47,3 +47,12 @@ The input grids should be prepared as follows, depending on the plate reconstruc
 - `ContinentalMasks`, `SeafloorAge` and `SpreadingRate` from `gplately`'s `SeafloorGrid` module, unless already available for the selected plate model elsewhere, like Zenodo or webDAV.
 - `CrustalCarbon` from `\utils\`, which itself requires the `SeafloorAge` and `SpreadingRate` grids.
 - `TotalSediment` from the [GitHub workflow](https://github.com/EarthByte/predicting-sediment-thickness). More details [here](https://www.earthbyte.org/predicting-sediment-thickness-on-vanished-ocean-crust-since-200-ma/).
+
+
+## Workflow
+
+1. **01-Sources-of-Water.ipynb** - Produces total water grids for each reservoir.
+2. **02-Subducted-Water.ipynb** - Interpolate the grids in (1) at subduction zones to generate subducted water grids.
+3. **03-Water-Storage.ipynb** - Develop water storage grids from lookup tables.
+4. **04-Water-Slab-Outflux.ipynb** - Develop slab outflux as the difference between subducted water (2) and water storage (3).
+5. **05-Cumulative-Water-Grids.ipynb** - Develop cumulative subducted water, water storage and water slab outflux grids.
