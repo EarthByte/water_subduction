@@ -1,4 +1,4 @@
-# water_subduction
+# Subduction of water in oceanic plate reservoirs
 A repository to calculate subducted H2O, stored H2O and slab outflux of H2O through time.
 
 Reference: Mather, B.R., Müller, R.D., Dutkiewicz, A. et al. Carbon emissions along divergent plate boundaries modulate icehouse-greenhouse climates. Commun Earth Environ 7, 48 (2026). https://doi.org/10.1038/s43247-025-03097-0
